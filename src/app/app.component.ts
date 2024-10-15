@@ -22,8 +22,4 @@ export class AppComponent {
     .filter(
       (value: any, index: any, self: any) => self.indexOf(value) === index
     );
-
-  constructor() {
-    console.log(this.categories);
-  }
 }
