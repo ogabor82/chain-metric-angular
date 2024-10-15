@@ -15,6 +15,10 @@ import { CategoryComponent } from './category/category.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  onCategorySelected(categoryName: string) {
+    console.log('Category selected:', categoryName);
+  }
+
   title = 'chain-metrics';
   news: any = DUMMY_NEWS.Data;
   categories = DUMMY_NEWS.Data.map((news: any) => news.categories.split('|'))

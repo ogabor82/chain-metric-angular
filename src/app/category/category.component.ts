@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-category',
@@ -9,4 +9,9 @@ import { Component, Input } from '@angular/core';
 })
 export class CategoryComponent {
   @Input({ required: true }) name!: string;
+  @Output() categorySelected = new EventEmitter<string>();
+
+  onCategorySelected() {
+    this.categorySelected.emit(this.name);
+  }
 }

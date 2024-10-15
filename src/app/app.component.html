@@ -3,7 +3,10 @@
 
   <div class="flex flex-row justify-center">
     @for (category of categories; track $index) {
-    <app-category [name]="category" />
+    <app-category
+      [name]="category"
+      (categorySelected)="onCategorySelected($event)"
+    />
     }
   </div>
 
