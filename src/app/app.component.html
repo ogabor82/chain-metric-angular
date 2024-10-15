@@ -10,26 +10,13 @@
     }
   </div>
 
+  @for (news of filteredNews; track $index) {
   <app-news
-    [imageurl]="news[0].imageurl"
-    [title]="news[0].title"
-    [body]="news[0].body"
+    [imageurl]="news.imageurl"
+    [title]="news.title"
+    [body]="news.body"
   />
-  <app-news
-    [imageurl]="news[1].imageurl"
-    [title]="news[1].title"
-    [body]="news[1].body"
-  />
-  <app-news
-    [imageurl]="news[2].imageurl"
-    [title]="news[2].title"
-    [body]="news[2].body"
-  />
-  <app-news
-    [imageurl]="news[3].imageurl"
-    [title]="news[3].title"
-    [body]="news[3].body"
-  />
+  }
 </main>
 
 <router-outlet />

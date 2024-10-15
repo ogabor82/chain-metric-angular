@@ -15,8 +15,18 @@ import { CategoryComponent } from './category/category.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  selectedCategory: string = '';
+
+  get filteredNews() {
+    return this.selectedCategory
+      ? this.news.filter((news: any) =>
+          news.categories.split('|').includes(this.selectedCategory)
+        )
+      : this.news;
+  }
+
   onCategorySelected(categoryName: string) {
-    console.log('Category selected:', categoryName);
+    this.selectedCategory = categoryName;
   }
 
   title = 'chain-metrics';
