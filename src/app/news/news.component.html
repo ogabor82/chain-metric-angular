@@ -1,7 +1,9 @@
 <div class="flex flex-row">
-  <div class="max-w-48"><img src="{{ selectedNews.imageurl }}" /></div>
+  <div class="max-w-48">
+    <img class="cursor-pointer" [src]="imageurl" [alt]="title" />
+  </div>
   <div class="flex flex-col">
-    <div>{{ selectedNews.title }}</div>
-    <div>{{ selectedNews.body }}</div>
+    <div>{{ title }}</div>
+    <div>{{ body }}</div>
   </div>
 </div>

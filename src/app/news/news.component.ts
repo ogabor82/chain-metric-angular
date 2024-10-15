@@ -1,8 +1,4 @@
-import { Component } from '@angular/core';
-
-import DUMMY_NEWS from '../news-dummy.json';
-
-const randomIndex = Math.floor(Math.random() * DUMMY_NEWS.Data.length);
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-news',
@@ -12,5 +8,7 @@ const randomIndex = Math.floor(Math.random() * DUMMY_NEWS.Data.length);
   styleUrl: './news.component.scss',
 })
 export class NewsComponent {
-  selectedNews = DUMMY_NEWS.Data[randomIndex];
+  @Input() imageurl!: string;
+  @Input() title!: string;
+  @Input() body!: string;
 }

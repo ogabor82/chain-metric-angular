@@ -4,6 +4,8 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { NewsComponent } from './news/news.component';
 
+import DUMMY_NEWS from './news-dummy.json';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -13,4 +15,5 @@ import { NewsComponent } from './news/news.component';
 })
 export class AppComponent {
   title = 'chain-metrics';
+  news: any = DUMMY_NEWS.Data;
 }
