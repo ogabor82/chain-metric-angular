@@ -1,5 +1,11 @@
-<main class="main">
+<main class="main flex flex-col">
   <app-header />
+
+  <div class="flex flex-row justify-center">
+    @for (category of categories; track $index) {
+    <app-category [name]="category" />
+    }
+  </div>
 
   <app-news
     [imageurl]="news[0].imageurl"

@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './news.component.scss',
 })
 export class NewsComponent {
-  @Input() imageurl!: string;
-  @Input() title!: string;
-  @Input() body!: string;
+  @Input({ required: true }) imageurl!: string;
+  @Input({ required: true }) title!: string;
+  @Input({ required: true }) body!: string;
 }
