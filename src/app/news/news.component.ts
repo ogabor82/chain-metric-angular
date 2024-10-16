@@ -1,10 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-interface News {
-  imageurl: string;
-  title: string;
-  body: string;
-}
+import { News } from './news.model';
 
 @Component({
   selector: 'app-news',
