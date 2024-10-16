@@ -1,5 +1,6 @@
 <p
   class="p-2 border border-gray-700 rounded cursor-pointer"
+  [class.active]="isSelected"
   (click)="onCategorySelected()"
 >
   {{ name }}

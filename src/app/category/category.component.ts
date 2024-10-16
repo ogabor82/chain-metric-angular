@@ -10,6 +10,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class CategoryComponent {
   @Input({ required: true }) name!: string;
   @Output() categorySelected = new EventEmitter<string>();
+  @Input() isSelected: boolean = false;
 
   onCategorySelected() {
     this.categorySelected.emit(this.name);

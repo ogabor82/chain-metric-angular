@@ -5,6 +5,7 @@
     @for (category of categories; track $index) {
     <app-category
       [name]="category"
+      [isSelected]="category === selectedCategory"
       (categorySelected)="onCategorySelected($event)"
     />
     }
