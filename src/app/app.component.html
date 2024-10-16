@@ -11,11 +11,7 @@
   </div>
 
   @for (news of filteredNews; track $index) {
-  <app-news
-    [imageurl]="news.imageurl"
-    [title]="news.title"
-    [body]="news.body"
-  />
+  <app-news [news]="news" />
   }
 </main>
 
