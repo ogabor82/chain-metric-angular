@@ -6,11 +6,18 @@ import { NewsComponent } from './news/news.component';
 
 import DUMMY_NEWS from './news-dummy.json';
 import { CategoryComponent } from './category/category.component';
+import { WatchlistsComponent } from './watchlist/watchlists/watchlists.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, NewsComponent, CategoryComponent],
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    NewsComponent,
+    CategoryComponent,
+    WatchlistsComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

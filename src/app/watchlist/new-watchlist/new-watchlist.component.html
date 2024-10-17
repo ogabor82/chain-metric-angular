@@ -1,0 +1,11 @@
+<div
+  class="fixed w-full h-full top-0 left-0 bg-slate-500 border border-gray-500"
+  (click)="onClose()"
+></div>
+<dialog class="backdrop:bg-black/50 backdrop:backdrop-blur-md" open>
+  <p>Lorem ipsum dolor sit amet.</p>
+
+  <button class="bg-blue-700 text-white rounded-lg p-4" (click)="onClose()">
+    Close
+  </button>
+</dialog>
