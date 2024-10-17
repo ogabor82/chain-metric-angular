@@ -3,9 +3,45 @@
   (click)="onClose()"
 ></div>
 <dialog class="backdrop:bg-black/50 backdrop:backdrop-blur-md" open>
-  <p>Lorem ipsum dolor sit amet.</p>
+  <h2 class="text-2xl font-bold">Create a new watchlist</h2>
+  <form class="flex flex-col space-y-4">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      [(ngModel)]="watchlistName"
+      required
+    />
+    <label for="description">Description</label>
+    <textarea
+      id="description"
+      name="description"
+      [(ngModel)]="watchlistDescription"
+    ></textarea>
 
-  <button class="bg-blue-700 text-white rounded-lg p-4" (click)="onClose()">
-    Close
-  </button>
+    <label for="categories">Categories</label>
+    <select
+      id="categories"
+      name="categories"
+      [(ngModel)]="watchlistCategories"
+      multiple
+    >
+      <option value="movies">Movies</option>
+      <option value="tv-shows">TV Shows</option>
+      <option value="anime">Anime</option>
+      <option value="documentaries">Documentaries</option>
+    </select>
+    <button
+      class="bg-blue-700 text-white rounded-lg p-4"
+      type="submit"
+      [disabled]="!watchlistName"
+    >
+      Create
+    </button>
+
+    <button class="bg-blue-700 text-white rounded-lg p-4" (click)="onClose()">
+      Close
+    </button>
+  </form>
 </dialog>
